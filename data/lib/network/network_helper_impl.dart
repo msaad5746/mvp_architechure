@@ -6,7 +6,7 @@ import 'network_helper.dart';
 class NetworkHelperImpl extends NetworkHelper {
   @override
   Future<http.Response> get(String url, {Map headers}) {
-    return http.get(url, headers: appendHeader(headers: headers)).then((
+    return http.get(Uri.parse(url), headers: appendHeader(headers: headers)).then((
       http.Response response,
     ) {
       return handleResponse(response);
@@ -16,7 +16,7 @@ class NetworkHelperImpl extends NetworkHelper {
   @override
   Future<http.Response> post(String url, {Map headers, body, encoding}) {
     return http
-        .post(url,
+        .post(Uri.parse(url),
             body: json.encode(body),
             headers: appendHeader(headers: headers),
             encoding: encoding)
@@ -28,7 +28,7 @@ class NetworkHelperImpl extends NetworkHelper {
   @override
   Future<http.Response> delete(String url, {Map headers}) {
     return http
-        .delete(url, headers: appendHeader(headers: headers))
+        .delete(Uri.parse(url), headers: appendHeader(headers: headers))
         .then((http.Response response) {
       return handleResponse(response);
     });
@@ -37,7 +37,7 @@ class NetworkHelperImpl extends NetworkHelper {
   @override
   Future<http.Response> put(String url, {Map headers, body, encoding}) {
     return http
-        .put(url,
+        .put(Uri.parse(url),
             body: json.encode(body),
             headers: appendHeader(headers: headers),
             encoding: encoding)
