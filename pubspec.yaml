@@ -1,4 +1,4 @@
-name: mvp_skeleton
+name: paynest
 description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -28,8 +28,8 @@ dependencies:
   cupertino_icons: ^1.0.0
 
   #di
-  get_it: ^5.0.6
-  provider: ^4.3.3
+  get_it: ^7.2.0
+  provider: ^6.0.2
   domain:
     path: ./domain
 

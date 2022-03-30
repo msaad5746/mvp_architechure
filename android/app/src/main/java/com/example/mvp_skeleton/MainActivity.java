@@ -1,4 +1,4 @@
-package com.example.mvp_skeleton;
+package com.paynest.dev;
 
 import io.flutter.embedding.android.FlutterActivity;
 

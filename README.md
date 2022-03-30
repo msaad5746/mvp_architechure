@@ -1,4 +1,4 @@
-# mvp_skeleton
+# paynest
 
 A new Flutter application.
 
